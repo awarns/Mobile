@@ -3,9 +3,17 @@ Feature: Order Estimator
   enter an order to estimate my total costs
 
   Background: Log in to the app
-    Given I Login to the Mobile App
+
 
   Scenario: Search For Items
-    When I Search For An Item
+    When I Search For Item "3000"
+    Then I Should See The Item Details Page
+
+
+  Scenario: Personalize Item
+    When I Search For Item "3000"
+    And I Personalize using Embroidery
+
+
 
 

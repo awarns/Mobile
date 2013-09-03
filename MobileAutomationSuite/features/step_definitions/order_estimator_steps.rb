@@ -1,10 +1,23 @@
-When(/^I Search For An Item$/) do
+When(/^I Search For Item "([^"]*)"$/) do |item|
 
-  on(HomeScreen).click_menu
-  on(HomeScreen).click_order_estimator
-  on(ItemSearchScreen).search_for_item
 
+  navigate_to(ItemScreen, :using => :order_estimator).search_for_item item
+
+
+end
+
+Then(/^I Should See The Item Details Page$/) do
+
+
+  on(ItemScreen).item_exists
 
 
 
 end
+When(/^I Personalize using Embroidery$/) do
+
+  on(ItemScreen).personalize_with_embroidery
+
+
+end
+
