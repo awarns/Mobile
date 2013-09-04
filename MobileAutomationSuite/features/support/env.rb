@@ -1,6 +1,6 @@
 require 'furter'
 require 'require_all'
-require 'rspec-expectations'
+require 'rspec/expectations'
 
 
 require_rel '/screens'
@@ -31,10 +31,18 @@ Furter::Navigation.routes = {
     :order_history => [
         [LoginScreen, :login],
         [HomeScreen, :click_orders],
-        [OrderHistoryScreen, :click_order],
+        [OrderHistoryScreen, :click_party_order],
         [OrderHistoryScreen, :click_guests],
         [GuestOrderScreen, :click_items]
+
     ],
+    :order_history_retail => [
+        [LoginScreen, :login],
+        [HomeScreen, :click_orders],
+        [OrderHistoryScreen, :click_retail_order],
+        [OrderHistoryScreen, :click_guests]
+    ],
+
 
 
 

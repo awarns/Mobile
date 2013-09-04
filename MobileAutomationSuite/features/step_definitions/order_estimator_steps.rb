@@ -12,7 +12,6 @@ Then(/^I Should See The Item Details Page$/) do
   on(ItemScreen).item_exists
 
 
-
 end
 When(/^I Personalize using Embroidery$/) do
 
@@ -20,4 +19,3 @@ When(/^I Personalize using Embroidery$/) do
 
 
 end
-

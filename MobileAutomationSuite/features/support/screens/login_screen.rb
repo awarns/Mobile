@@ -13,7 +13,8 @@ class LoginScreen
     #type_into_keyboard(id)
     #type_into_keyboard('testing31')
     self.login_button
-    wait_for_element_to_exist("view:'UINavigationItemView' marked:'Home'")
+    sleep(10)
+    view_with_mark_exists('Home').should == true
 
 
   end
