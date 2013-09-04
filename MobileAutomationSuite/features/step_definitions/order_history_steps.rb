@@ -49,7 +49,6 @@ Then(/^I should See That Specific Guests Order Details$/) do
   on(GuestOrderScreen).click_items
   on(GuestOrderScreen).verify_items
 
-
 end
 
 When(/^I View A Specific Retail Order$/) do

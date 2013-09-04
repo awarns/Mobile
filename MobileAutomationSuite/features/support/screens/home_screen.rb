@@ -62,6 +62,12 @@ class HomeScreen
 
   end
 
+  def click_contacts
+
+    touch("view:'UILabel' marked:'Contacts'")
+
+  end
+
 
 
 

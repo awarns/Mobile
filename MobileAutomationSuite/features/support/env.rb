@@ -34,13 +34,19 @@ Furter::Navigation.routes = {
         [OrderHistoryScreen, :click_party_order],
         [OrderHistoryScreen, :click_guests],
         [GuestOrderScreen, :click_items]
-
     ],
     :order_history_retail => [
         [LoginScreen, :login],
         [HomeScreen, :click_orders],
         [OrderHistoryScreen, :click_retail_order],
         [OrderHistoryScreen, :click_guests]
+    ],
+    :contacts => [
+        [LoginScreen, :login],
+        [HomeScreen, :add_contact],
+        [ContactsScreen, :add_new_contact],
+        [HomeScreen, :click_menu],
+        [HomeScreen, :click_contacts]
     ],
 
 
