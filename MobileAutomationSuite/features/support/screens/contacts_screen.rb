@@ -2,16 +2,16 @@ class ContactsScreen
   include Furter
 
     button(:done, :text => 'Done')
+    table(:table_contacts, :label => 'Empty list')
 
 
-
-  def add_new_contact
+  def add_new_contact(fname,lname)
 
 
     touch( "view:'UITextFieldLabel' marked:'Jessica")
     sleep(2)
-    type_into_keyboard("#{@firstname}")
-    type_into_keyboard("#{@lastname}")
+    type_into_keyboard("#{fname}")
+    type_into_keyboard("#{lname}")
     type_into_keyboard('awarns@thrityonegifts.com')
     type_into_keyboard('4192023773')
     tables_scrolled = frankly_map( "tableView", "scrollToBottom")
@@ -30,12 +30,14 @@ class ContactsScreen
 
   end
 
-  def verify_contact_is_in_list
+  def search_contact(name)
 
     sleep(4)
     touch("view:'UITextFieldLabel' marked:'Search'")
-    @fullname = "#{@firstname}" + " " + "#{@lastname}"
-    type_into_keyboard("#{@fullname}")
+    type_into_keyboard("#{name}")
+    sleep(2)
+    self.send("table_contacts=", 'Jenni Abbot')
+
 
 
   end

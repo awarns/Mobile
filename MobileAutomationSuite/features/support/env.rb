@@ -44,11 +44,14 @@ Furter::Navigation.routes = {
     :contacts => [
         [LoginScreen, :login],
         [HomeScreen, :add_contact],
-        [ContactsScreen, :add_new_contact],
-        [HomeScreen, :click_menu],
-        [HomeScreen, :click_contacts]
+        [ContactsScreen, :add_new_contact]
     ],
-
+    :search_contacts => [
+        [LoginScreen, :login],
+        [HomeScreen, :click_menu],
+        [HomeScreen, :click_contacts],
+        [ContactsScreen, :search_contact]
+    ],
 
 
 

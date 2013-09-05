@@ -9,6 +9,15 @@ Feature: Add A New Contact
 
 
   Scenario: Add a New Contact
-    When I Add a New Contact
-    Then I should See Her in My Contact List
+    When I Add a New Contact named "Automation" "Lewis"
+    Then I should See "Automation Lewis" in My Contact List
+
+  Scenario: Check Contact Order History
+    When I View a Guests Information
+    And I Check Their Order History
+
+
+
+
+
 
