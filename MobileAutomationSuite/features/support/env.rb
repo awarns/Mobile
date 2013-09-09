@@ -20,7 +20,11 @@ Furter::Navigation.routes = {
         [LoginScreen, :login],
         [HomeScreen, :click_menu],
         [HomeScreen, :click_order_estimator],
-        [ItemScreen, :search_for_item]
+        [ItemScreen, :search_for_item],
+        [ItemScreen, :pick_color],
+        [ItemScreen, :personalize_with_none],
+        [ItemScreen, :add_to_cart],
+        [ItemScreen, :continue_shopping]
     ],
     :stats => [
         [LoginScreen, :login],

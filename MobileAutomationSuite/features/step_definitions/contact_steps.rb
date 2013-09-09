@@ -16,13 +16,43 @@ end
 
 When(/^I View a Guests Information$/) do
 
-  navigate_to(ContactsScreen, :using => :search_contacts).search_contact 'Jenni Abbot'
-
+  navigate_to(ContactsScreen, :using => :search_contacts).search_contact 'Colin Cowherd'
+  on(ContactsScreen).send("table_contacts=", 'Colin Cowherd')
 
 end
 
 When(/^I Check Their Order History$/) do
 
 
+  on(ContactsScreen).check_order_history
+
+end
+
+Then(/^I Should See The Order History Screen$/) do
+
+  on(OrderHistoryScreen).screen_exists
+
+end
+
+When(/^I Add A Note To a Contact$/) do
+
+  on(ContactsScreen).add_a_note
+
+end
+
+Then(/^I Should See The Added Note$/) do
+
+  on(ContactsScreen).verify_note
+
+end
+
+When(/^Edit Their Contact Information$/) do
+
+  on(ContactsScreen).edit_contact
+
+end
+Then(/^I Should See The Edited Contact$/) do
+
+  on(ContactsScreen).verify_edited_contact
 
 end

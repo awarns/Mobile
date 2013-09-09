@@ -14,8 +14,6 @@ class HomeScreen
   button(:settings, :label => 'Settings')
 
 
-
-
   def add_contact
 
 
@@ -67,29 +65,6 @@ class HomeScreen
     touch("view:'UILabel' marked:'Contacts'")
 
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 end

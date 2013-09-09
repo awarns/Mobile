@@ -8,7 +8,7 @@ class OrderHistoryScreen
     sleep(3)
     wait_for_and_touch ("view:'UITextFieldLabel' marked:'ALL'")
     sleep(3)
-    tables_scrolled = frankly_map( "tableView", "scrollDownRows:", 17 )
+    tables_scrolled = frankly_map("tableView", "scrollDownRows:", 17)
     raise "no table could be found to scroll" if tables_scrolled.empty?
     sleep(2)
     touch ("view:'UILabel' marked:'Party Order ($200 min)'")
@@ -25,7 +25,7 @@ class OrderHistoryScreen
     sleep(3)
     wait_for_and_touch ("view:'UITextFieldLabel' marked:'ALL'")
     sleep(3)
-    tables_scrolled = frankly_map( "tableView", "scrollDownRows:", 21 )
+    tables_scrolled = frankly_map("tableView", "scrollDownRows:", 21)
     raise "no table could be found to scroll" if tables_scrolled.empty?
     sleep(2)
     touch ("view:'UILabel' marked:'Retail Customer Order'")
@@ -74,7 +74,7 @@ class OrderHistoryScreen
   def click_guests
 
 
-   touch("view:'UIImageView' marked:'btn-right-up.png'")
+    touch("view:'UIImageView' marked:'btn-right-up.png'")
     #need to figure out data to verify and how to get it
 
   end
@@ -102,6 +102,12 @@ class OrderHistoryScreen
 
     touch ("view:'UILabel' marked:'#{name}'")
 
+
+  end
+
+  def screen_exists
+
+    view_with_mark_exists('Order History').should == true
 
   end
 

@@ -9,12 +9,24 @@ Feature: Add A New Contact
 
 
   Scenario: Add a New Contact
-    When I Add a New Contact named "Automation" "Lewis"
-    Then I should See "Automation Lewis" in My Contact List
+    When I Add a New Contact named "Colin" "Cowherd"
+    Then I should See "Colin Cowherd" in My Contact List
 
   Scenario: Check Contact Order History
     When I View a Guests Information
     And I Check Their Order History
+    Then I Should See The Order History Screen
+
+  Scenario: Add A Note
+    When I View a Guests Information
+    And I Add A Note To a Contact
+    Then I Should See The Added Note
+
+  Scenario: Edit A Contact
+    When I View a Guests Information
+    And Edit Their Contact Information
+    Then I Should See The Edited Contact
+
 
 
 

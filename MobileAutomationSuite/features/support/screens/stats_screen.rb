@@ -2,7 +2,6 @@ class StatsScreen
   include Furter
 
 
-
   def screen_verification
 
 

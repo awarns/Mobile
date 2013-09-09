@@ -70,3 +70,4 @@ When(/^I Email The Guest$/) do
    on(GuestOrderScreen).email_guest
 
 end
+
