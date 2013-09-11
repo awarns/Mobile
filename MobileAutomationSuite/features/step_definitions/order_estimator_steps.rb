@@ -57,3 +57,27 @@ Then(/^I Should See The Item Search Screen$/) do
   on(ItemScreen).item_search_screen_is_present
 
 end
+
+When(/^I Clear All the Items From My Cart$/) do
+
+  navigate_all(:using => :quick_view_cart)
+  on(ItemScreen).clear_all_in_cart
+  on(ItemScreen).view_cart
+
+end
+
+When(/^I Edit an Existing Item in My Cart$/) do
+
+  navigate_all(:using => :quick_view_cart)
+  on(ItemScreen).edit_existing_item
+  on(ItemScreen).continue_shopping
+
+end
+
+When(/^I Delete an Item From the Details Page of My Cart$/) do
+
+  navigate_all(:using => :quick_view_cart)
+  on(ItemScreen).delete_single_item
+  on(ItemScreen).continue_shopping
+
+end

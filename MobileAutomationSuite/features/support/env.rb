@@ -24,7 +24,14 @@ Furter::Navigation.routes = {
         [ItemScreen, :pick_color],
         [ItemScreen, :personalize_with_none],
         [ItemScreen, :add_to_cart],
+        [ItemScreen, :view_cart],
         [ItemScreen, :continue_shopping]
+    ],
+    :quick_view_cart => [
+        [LoginScreen, :login],
+        [HomeScreen, :click_menu],
+        [HomeScreen, :click_order_estimator],
+        [ItemScreen, :view_cart]
     ],
     :stats => [
         [LoginScreen, :login],
@@ -56,7 +63,4 @@ Furter::Navigation.routes = {
         [HomeScreen, :click_contacts],
         [ContactsScreen, :search_contact]
     ],
-
-
-
 }

@@ -1,6 +1,9 @@
 Feature: Order Estimator
-  As a consultant I want the capability to
-  enter an order to estimate my total costs
+  As a consultant
+  I want the capability to enter an order to estimate my total costs
+  and send the order to one of my contacts
+
+
 
   Background: Log in to the app
 
@@ -25,9 +28,25 @@ Feature: Order Estimator
     And I Personalize using None
     Then I Verify the Item is in My Cart with Totals of, Product :"$96.00",Shipping: "$11.68",Tax :"$7.27", Total: "$114.95"
 
+  Scenario: Clear All Items From Cart
+    When I Clear All the Items From My Cart
+    Then I Verify the Item is in My Cart with Totals of, Product :"$0.00",Shipping: "$0.00",Tax :"$0.00", Total: "$0.00"
+
   Scenario: Continue Shopping
     When I Verify the Continue Shopping Button is Working
     Then I Should See The Item Search Screen
+
+  Scenario: Edit Item Already in My Cart
+    When I Edit an Existing Item in My Cart
+    Then I Verify the Item is in My Cart with Totals of, Product :"$25.00",Shipping: "$6.00",Tax :"$2.09", Total: "33.09"
+
+  Scenario: Delete Item from Item Details Page
+    When I Delete an Item From the Details Page of My Cart
+    Then I Verify the Item is in My Cart with Totals of, Product :"$0.00",Shipping: "$0.00",Tax :"$0.00", Total: "$0.00"
+
+
+
+
 
 
 

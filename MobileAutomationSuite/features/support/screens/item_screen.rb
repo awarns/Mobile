@@ -124,9 +124,16 @@ class ItemScreen
 
   end
 
-  def continue_shopping
+  def view_cart
 
     touch("view:'UIImageView' marked:'img-arrow-up.png'")
+
+  end
+
+
+  def continue_shopping
+
+
     sleep(5)
     touch("view:'UIButtonLabel' marked:'Continue Shopping'")
 
@@ -152,5 +159,45 @@ class ItemScreen
 
   end
 
+
+  def clear_all_in_cart
+
+    touch("view:'UIButtonLabel' marked:'Clear All'")
+    sleep(2)
+    touch("view:'UIAlertButton' marked:'Yes'")
+
+  end
+
+  def edit_existing_item
+
+    touch("view:'UIImageView' marked:'img-pinkbar.png'")
+    sleep(3)
+    view_with_mark_exists("Thermal Tote (#3000")
+    sleep(2)
+    touch("view:'UILabel' marked:'None'")
+    sleep(2)
+    touch("view:'UILabel' marked:'Icon-It w/o Text - add $7'")
+    sleep(2)
+    touch("view marked:'Tap to Select' index:0")
+    sleep(2)
+    touch("view marked:'Aqua'")
+    sleep(2)
+    touch("view marked:'Tap to Select' index:0")
+    sleep(2)
+    touch("view marked:'Baseball'")
+    sleep(2)
+    touch("view:'UIButtonLabel' marked:'Save & Return to Cart'")
+    sleep(2)
+
+  end
+
+  def delete_single_item
+
+    touch("view:'UIImageView' marked:'img-pinkbar.png'")
+    sleep(2)
+    touch("view:'UINavigationButton' marked:'Delete'")
+
+
+  end
 
 end
