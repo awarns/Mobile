@@ -44,6 +44,10 @@ Feature: Order Estimator
     When I Delete an Item From the Details Page of My Cart
     Then I Verify the Item is in My Cart with Totals of, Product :"$0.00",Shipping: "$0.00",Tax :"$0.00", Total: "$0.00"
 
+  Scenario: Email Order
+    When I Email A Customer Their Estimated Order
+    Then I Should Receive an Email
+
 
 
 

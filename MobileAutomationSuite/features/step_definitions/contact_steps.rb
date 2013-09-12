@@ -56,3 +56,21 @@ Then(/^I Should See The Edited Contact$/) do
   on(ContactsScreen).verify_edited_contact
 
 end
+
+When(/^I Email the Contact$/) do
+
+  on(ContactsScreen).email_contact
+
+end
+
+When(/^I Click on Their Address Info$/) do
+
+  on(ContactsScreen).view_address_on_google_maps
+
+end
+
+Then(/^I should see Google Maps$/) do
+
+  on(ContactsScreen).verify_google_maps
+
+end

@@ -96,4 +96,26 @@ class ContactsScreen
 
   end
 
+  def email_contact
+
+   touch("view:'UIButton' marked:'glyph email'")
+   sleep(3)
+   view_with_mark_exists('Contact View').should == false
+
+  end
+
+  def view_address_on_google_maps
+
+    touch("view:'UINavigationButton' marked:'More'")
+    sleep(3)
+    touch("view:'UILabel' marked:'205 N. Nelson Road Columbus, OH 43219'")
+
+  end
+
+  def verify_google_maps
+
+    view_with_mark_exists('Contact Detail').should == false
+
+  end
+
 end

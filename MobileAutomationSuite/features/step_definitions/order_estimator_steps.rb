@@ -81,3 +81,17 @@ When(/^I Delete an Item From the Details Page of My Cart$/) do
   on(ItemScreen).continue_shopping
 
 end
+
+When(/^I Email A Customer Their Estimated Order$/) do
+
+  navigate_all(:using => :quick_view_cart)
+  on(ItemScreen).send_email
+
+
+end
+
+Then(/^I Should Receive an Email$/) do
+
+  puts 'Need to Check Email for Order'
+
+end

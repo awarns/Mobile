@@ -3,6 +3,9 @@ Feature: Order History Screen
   I want the ability to view previously submitted orders
   on the Order History Screen
 
+  Prior to these tests running, rake task called mobile_setup needs to be run
+  in PPS Automation Suite
+
 Background: I log into the app
 
 
@@ -35,6 +38,7 @@ Scenario: View Guests Info for a Retail Order
 Scenario: Email Guest
   When I View "Andy Mobile"'s Retail Guests Information
   And I Email The Guest
+  Then I Should Receive an Email
 
 
 

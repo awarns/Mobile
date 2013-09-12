@@ -6,7 +6,6 @@ require 'rspec/expectations'
 require_rel '/screens'
 
 
-
 World(Furter::Navigation)
 
 APP_BUNDLE_PATH = File.expand_path( '/Users/itqa1/app/31gifts/iOS/Frank/frankified_build/Frankified.app', __FILE__ )
@@ -63,4 +62,13 @@ Furter::Navigation.routes = {
         [HomeScreen, :click_contacts],
         [ContactsScreen, :search_contact]
     ],
+    :alerts => [
+        [LoginScreen, :login],
+        [HomeScreen, :click_alerts]
+    ],
+    :announcements => [
+        [LoginScreen, :login],
+        [HomeScreen, :click_menu],
+        [HomeScreen, :click_announcements]
+    ]
 }

@@ -66,5 +66,10 @@ class HomeScreen
 
   end
 
+  def click_announcements
+
+    touch("view:'UILabel' marked:'Announcements'")
+
+  end
 
 end

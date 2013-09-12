@@ -120,8 +120,6 @@ class ItemScreen
     touch("view:'UILabel' marked:'None'")
     sleep(2)
 
-
-
   end
 
   def view_cart
@@ -148,14 +146,12 @@ class ItemScreen
     view_with_mark_exists("#{tax}").should == true
     view_with_mark_exists("#{total}").should == true
 
-
-
   end
 
   def item_search_screen_is_present
 
 
-    view_with_mark_exists("Item Search(1)")
+    view_with_mark_exists("Item Search(1)").should == true
 
   end
 
@@ -197,6 +193,15 @@ class ItemScreen
     sleep(2)
     touch("view:'UINavigationButton' marked:'Delete'")
 
+
+  end
+
+  def send_email
+
+    touch("view:'UIButton' marked:'Email'")
+    sleep(3)
+    touch("view:'UILabel' marked:'Jenni Abbot'")
+    touch("view:'UINavigationButton' marked:'Done'")
 
   end
 

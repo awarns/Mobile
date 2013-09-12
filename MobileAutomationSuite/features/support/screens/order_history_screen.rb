@@ -25,7 +25,7 @@ class OrderHistoryScreen
     sleep(3)
     wait_for_and_touch ("view:'UITextFieldLabel' marked:'ALL'")
     sleep(3)
-    tables_scrolled = frankly_map("tableView", "scrollDownRows:", 21)
+    tables_scrolled = frankly_map("tableView", "scrollDownRows:", 19)
     raise "no table could be found to scroll" if tables_scrolled.empty?
     sleep(2)
     touch ("view:'UILabel' marked:'Retail Customer Order'")
