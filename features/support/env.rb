@@ -13,7 +13,6 @@ APP_BUNDLE_PATH = File.expand_path( '/Users/itqa1/app/31gifts/iOS/Frank/frankifi
 Frank::Cucumber::FrankHelper.use_shelley_from_now_on
 
 Furter::Navigation.routes = {
-
     :default => [],
     :order_estimator => [
         [LoginScreen, :login],
