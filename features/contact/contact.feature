@@ -31,7 +31,7 @@ Feature: Add A New Contact
     And I Click on Their Address Info
     Then I should see Google Maps
 
-  Scenario: Edit A Contact
+  Scenario: Edit an existing Contact
     When I View a Guests Information
     And Edit Their Contact Information
     Then I Should See The Edited Contact

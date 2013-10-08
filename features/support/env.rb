@@ -70,5 +70,9 @@ Furter::Navigation.routes = {
         [LoginScreen, :login],
         [HomeScreen, :click_menu],
         [HomeScreen, :click_announcements]
+    ],
+    :business_updates => [
+        [LoginScreen, :login],
+        [HomeScreen, :click_updates]
     ]
 }

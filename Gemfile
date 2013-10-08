@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'rake'
 gem 'cucumber'
 gem 'rspec'
 gem 'furter'
-gem 'rake'
 gem 'require_all'
+

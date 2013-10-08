@@ -8,6 +8,6 @@ Feature: Alerts
 
   Background: I Login to the App
 
-  Scenario: View Business Updates > Products
+  Scenario: View Alerts
     When I View My Alerts
     Then I Should See the Alerts Screen
