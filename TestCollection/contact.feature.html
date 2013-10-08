@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>contact.feature</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(204,19,14); font-weight: bold; }
+.s1 { color: rgb(169,183,198); }
+</style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+contact.feature</FONT>
+</center></TD></TR></TABLE>
+<pre>
+
+<span class="s0">Feature: </span><span class="s1">Add A New Contact 
+ 
+  As a Consultant 
+  I want to be able add a New Contact from the Home Screen 
+  as well as search for existing consultants 
+ 
+ 
+  </span><span class="s0">Background: </span><span class="s1">Login to the App 
+ 
+  </span><span class="s0">Scenario: </span><span class="s1">Add a New Contact 
+    </span><span class="s0">When </span><span class="s1">I Add a New Contact named &quot;Colin&quot; &quot;Cowherd&quot; 
+    </span><span class="s0">Then </span><span class="s1">I should See &quot;Colin Cowherd&quot; in My Contact List 
+ 
+  </span><span class="s0">Scenario: </span><span class="s1">Check Contact Order History 
+    </span><span class="s0">When </span><span class="s1">I View a Guests Information 
+    </span><span class="s0">And </span><span class="s1">I Check Their Order History 
+    </span><span class="s0">Then </span><span class="s1">I Should See The Order History Screen 
+ 
+  </span><span class="s0">Scenario: </span><span class="s1">Add A Note 
+    </span><span class="s0">When </span><span class="s1">I View a Guests Information 
+    </span><span class="s0">And </span><span class="s1">I Add A Note To a Contact 
+    </span><span class="s0">Then </span><span class="s1">I Should See The Added Note 
+ 
+  </span><span class="s0">Scenario: </span><span class="s1">Email A Contact 
+    </span><span class="s0">When </span><span class="s1">I View a Guests Information 
+    </span><span class="s0">And </span><span class="s1">I Email the Contact 
+    </span><span class="s0">Then </span><span class="s1">I Should Receive an Email 
+ 
+  </span><span class="s0">Scenario: </span><span class="s1">View Google Map Location 
+    </span><span class="s0">When </span><span class="s1">I View a Guests Information 
+    </span><span class="s0">And </span><span class="s1">I Click on Their Address Info 
+    </span><span class="s0">Then </span><span class="s1">I should see Google Maps 
+ 
+  </span><span class="s0">Scenario: </span><span class="s1">Edit an existing Contact 
+    </span><span class="s0">When </span><span class="s1">I View a Guests Information 
+    </span><span class="s0">And </span><span class="s1">Edit Their Contact Information 
+    </span><span class="s0">Then </span><span class="s1">I Should See The Edited Contact 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+</span></pre>
+</body>
+</html>
