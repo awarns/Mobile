@@ -12,12 +12,13 @@ class HomeScreen
   button(:contacts, :text => 'Contacts')
   button(:announcements, :text => 'Announcements')
   button(:settings, :label => 'Settings')
+  view(:contacts, :label => 'Contacts', :index => 1)
 
 
   def add_contact
 
 
-    self.new_contact
+    contacts
 
   end
 
@@ -50,7 +51,7 @@ class HomeScreen
 
   def click_updates
 
-    self.updates
+    touch("view:'UITabBarButton' marked:'Updates'")
 
   end
 

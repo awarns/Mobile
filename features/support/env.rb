@@ -57,13 +57,12 @@ Furter::Navigation.routes = {
     ],
     :search_contacts => [
         [LoginScreen, :login],
-        [HomeScreen, :click_menu],
         [HomeScreen, :click_contacts],
         [ContactsScreen, :search_contact]
     ],
     :alerts => [
         [LoginScreen, :login],
-        [HomeScreen, :click_alerts]
+        [HomeScreen, :click_updates]
     ],
     :announcements => [
         [LoginScreen, :login],

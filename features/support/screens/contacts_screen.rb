@@ -1,51 +1,55 @@
 class ContactsScreen
   include Furter
 
-  button(:done, :text => 'Done')
-  table(:table_contacts, :label => 'Empty list')
-  button(:order_history, :label => 'glyph cart')
-  button(:add_note, :label => 'glyph notes')
-  button(:more, :label => 'More')
-  button(:edit, :label => 'Edit')
+
+  view(:post, :label => 'Post')
+  view(:add_contact, :label => 'Add', :index => 0)
+  view(:jessica, :label => 'Jessica')
+  view(:street_address, :label => 'Street Address')
+  view(:zip_code, :label => 'Zipcode')
+  view(:done, :label => 'Done', :index => 1)
+  view(:search, :label => 'Search')
+  view(:add_note, :label => 'glyph notes')
 
 
-  def check_order_history
-
-    self.order_history
-
-  end
 
   def add_a_note
 
-    self.add_note
+    add_note
     sleep(4)
     type_into_keyboard('Automation Test')
-    self.done
+    post
 
   end
 
   def add_new_contact(fname, lname)
 
 
+
+
+
+    add_contact
     sleep(2)
-
-
-    touch("view:'UITextFieldLabel' marked:'Jessica")
+    jessica
     sleep(2)
     type_into_keyboard("#{fname}")
+    sleep(1)
     type_into_keyboard("#{lname}")
-    type_into_keyboard('awarns@thrityonegifts.com')
+
+    email_part_1 = rand(999999999999)
+
+    type_into_keyboard("#{email_part_1}@gmail.com")
     type_into_keyboard('4192023773')
     tables_scrolled = frankly_map("tableView", "scrollToBottom")
     raise "no table could be found to scroll" if tables_scrolled.empty?
     sleep(2)
-    touch("view:'UITextFieldLabel' marked:'Street Address'")
+    street_address
     type_into_keyboard('205 N. Nelson Road')
     sleep(2)
     tables_scrolled = frankly_map("tableView", "scrollToBottom")
     raise "no table could be found to scroll" if tables_scrolled.empty?
     sleep(2)
-    touch("view:'UITextFieldLabel' marked:'Zipcode'")
+    zip_code
     type_into_keyboard('43219')
 
     self.done
@@ -55,9 +59,11 @@ class ContactsScreen
   def search_contact(name)
 
     sleep(4)
-    touch("view:'UITextFieldLabel' marked:'Search'")
-    type_into_keyboard("#{name}")
+    search
+    type_into_keyboard("C")
     sleep(2)
+    touch("view:'UILabel' marked:'#{name}'")
+
 
   end
 
@@ -70,14 +76,12 @@ class ContactsScreen
 
   def edit_contact
 
-    self.more
+    touch("view:'UIButtonLabel' marked:'Edit'")
     sleep(5)
     view_with_mark_exists('awarns@thirtyonegifts.com')
     view_with_mark_exists('Colin Cowherd')
     view_with_mark_exists('205 N. Nelson RoadColumbus, OH 43219')
     view_with_mark_exists('(419) 202-3773')
-    sleep(5)
-    self.edit
     sleep(5)
     touch("view:'UITextFieldLabel' marked:'Colin'")
     sleep(2)
@@ -98,7 +102,7 @@ class ContactsScreen
 
   def email_contact
 
-   touch("view:'UIButton' marked:'glyph email'")
+   touch("view:'UILabel' marked:'Email'")
    sleep(3)
    view_with_mark_exists('Contact View').should == false
 
